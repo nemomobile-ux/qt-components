@@ -50,7 +50,7 @@ make %{?jobs:-j%jobs}
 
 %install
 rm -rf %{buildroot}
-%make_install
+%make_install INSTALL_ROOT=%{buildroot}
 %fdupes  %{buildroot}/%{_libdir}
 
 %files
