@@ -59,8 +59,11 @@ QMAKE=`which qmake` 2> /dev/null
 if [ ! -f "$QMAKE" ]; then
     QMAKE=$QTDIR/bin/qmake
     if [ ! -f $QMAKE ]; then
-        echo "ERROR: Unable to find qmake. Try QTDIR=/path/to/qt $0."
-        exit 1
+        QMAKE=`which qmake-qt5` 2> /dev/null
+        if [ ! -f $QMAKE ]; then
+            echo "ERROR: Unable to find qmake. Try QTDIR=/path/to/qt $0."
+            exit 1
+        fi
     fi
 fi
 
