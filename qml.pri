@@ -74,7 +74,6 @@ for(targetpath, $$list($$unique(TARGETPATH))) {
         qmltarget = qmltarget_$$replace(targetpath, /, _)
         eval($${qmltarget}.CONFIG += no_check_exist executable)
         eval($${qmltarget}.files = $$DESTDIR/$(TARGET))
-        eval($${qmltarget}.files += stfu)
         eval($${qmltarget}.path = $$installpath)
         INSTALLS += $${qmltarget}
     }
