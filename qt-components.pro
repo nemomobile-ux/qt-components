@@ -10,7 +10,7 @@ isEmpty(Q_COMPONENTS_SOURCE_TREE)|isEmpty(Q_COMPONENTS_BUILD_TREE) {
 
 features.files += $$Q_COMPONENTS_SOURCE_TREE/features/qt-components.prf
 features.files += $$Q_COMPONENTS_BUILD_TREE/features/qt-components-config.prf
-features.path = $$[QT_HOST_DATA]/mkspecs/features
+features.path = $$[QT_INSTALL_ARCHDATA]/mkspecs/features
 INSTALLS += features
 
 include(doc/doc.pri)

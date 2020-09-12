@@ -61,7 +61,7 @@ rm -rf %{buildroot}
 
 %files devel
 %defattr(-,root,root,-)
-%{_datadir}/qt5/mkspecs/*
+%{_prefix}/*/qt5/mkspecs/features/qt-components*prf
 
 %files gallery
 %defattr(-,root,root,-)
