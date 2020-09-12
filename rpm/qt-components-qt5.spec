@@ -18,6 +18,9 @@ BuildRequires:  pkgconfig(mlite5)
 BuildRequires:  desktop-file-utils
 BuildRequires:  fdupes
 
+# for some reason debug info is disabled in the build
+%global debug_package %{nil}
+
 %description
 The Harmattan Qt Quick UX Components
 
